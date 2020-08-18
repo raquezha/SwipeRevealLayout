@@ -1,4 +1,4 @@
-/**
+/*
  The MIT License (MIT)
 
  Copyright (c) 2016 Chau Thai
@@ -29,17 +29,18 @@ import android.content.Context;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.graphics.Rect;
-import android.support.v4.view.GestureDetectorCompat;
-import android.support.v4.view.ViewCompat;
-import android.support.v4.widget.ViewDragHelper;
 import android.util.AttributeSet;
 import android.util.DisplayMetrics;
-import android.util.Log;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 
+import androidx.core.view.GestureDetectorCompat;
+import androidx.core.view.ViewCompat;
+import androidx.customview.widget.ViewDragHelper;
+
+@SuppressWarnings("ALL")
 @SuppressLint("RtlHardcoded")
 public class SwipeRevealLayout extends ViewGroup {
     // These states are used only for ViewBindHelper
@@ -183,6 +184,7 @@ public class SwipeRevealLayout extends ViewGroup {
         super(context, attrs, defStyleAttr);
     }
 
+    @SuppressLint("ClickableViewAccessibility")
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         mGestureDetector.onTouchEvent(event);
@@ -747,7 +749,7 @@ public class SwipeRevealLayout extends ViewGroup {
 
             mDragEdge = a.getInteger(R.styleable.SwipeRevealLayout_dragEdge, DRAG_EDGE_LEFT);
             mMinFlingVelocity = a.getInteger(R.styleable.SwipeRevealLayout_flingVelocity, DEFAULT_MIN_FLING_VELOCITY);
-            mMode = a.getInteger(R.styleable.SwipeRevealLayout_mode, MODE_NORMAL);
+            mMode = a.getInteger(R.styleable.SwipeRevealLayout_revealMode, MODE_NORMAL);
 
             mMinDistRequestDisallowParent = a.getDimensionPixelSize(
                     R.styleable.SwipeRevealLayout_minDistRequestDisallowParent,

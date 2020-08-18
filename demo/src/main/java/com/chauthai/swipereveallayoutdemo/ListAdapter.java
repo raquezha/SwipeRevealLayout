@@ -10,6 +10,8 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.chauthai.swipereveallayout.SwipeRevealLayout;
 import com.chauthai.swipereveallayout.ViewBinderHelper;
 
@@ -75,7 +77,7 @@ public class ListAdapter extends ArrayAdapter<String> {
 
     /**
      * Only if you need to restore open/close state when the orientation is changed.
-     * Call this method in {@link android.app.Activity#onSaveInstanceState(Bundle)}
+     * Call this method in {@link AppCompatActivity#onSaveInstanceState(Bundle)}
      */
     public void saveStates(Bundle outState) {
         binderHelper.saveStates(outState);
@@ -83,7 +85,7 @@ public class ListAdapter extends ArrayAdapter<String> {
 
     /**
      * Only if you need to restore open/close state when the orientation is changed.
-     * Call this method in {@link android.app.Activity#onRestoreInstanceState(Bundle)}
+     * Call this method in {@link AppCompatActivity#onRestoreInstanceState(Bundle)}
      */
     public void restoreStates(Bundle inState) {
         binderHelper.restoreStates(inState);

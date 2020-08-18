@@ -35,7 +35,7 @@ dependencies {
 <com.chauthai.swipereveallayout.SwipeRevealLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:mode="same_level"
+        app:revealMode="same_level"
         app:dragEdge="left">
 
         <!-- Your secondary layout here -->
@@ -50,7 +50,7 @@ dependencies {
             
 </com.chauthai.swipereveallayout.SwipeRevealLayout>
 ```
-```app:mode``` can be ```normal``` or ```same_level```
+```app:revealMode``` can be ```normal``` or ```same_level```
 
 ```app:dragEdge``` can be ```left```, ```right```, ```top``` or ```bottom```
 

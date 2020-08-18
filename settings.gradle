@@ -1,1 +1,1 @@
-include ':demo', ':swipe-reveal-layout'
+include ':swipe-reveal-layout'
